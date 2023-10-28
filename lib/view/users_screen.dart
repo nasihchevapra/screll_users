@@ -49,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       users = snap.data!;
                       return Card(
+                        color: Color.fromARGB(255, 255, 4, 130),
                         child: ListTile(
                             onTap: () {
                               Navigator.push(
