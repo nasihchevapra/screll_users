@@ -5,6 +5,7 @@ import 'package:screll_sample/view/detail_screen.dart';
 import 'package:screll_sample/view/search_screen.dart';
 import 'package:screll_sample/view_model/users_provider.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
   List<UserModel> users = [];
@@ -15,12 +16,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Users List'),
+          centerTitle: true,
           actions: [
-            IconButton(
-                onPressed: () {
-                  userpro.fetchUsers();
-                },
-                icon: Icon(Icons.get_app)),
             IconButton(
                 onPressed: () {
                   Navigator.push(
@@ -29,7 +26,11 @@ class HomeScreen extends StatelessWidget {
                         builder: (context) => SearchScreen(userslist: users),
                       ));
                 },
-                icon: Icon(Icons.search))
+                icon: Icon(
+                  Icons.search,
+                  color: Color.fromARGB(255, 255, 4, 130),
+                  size: 40,
+                ))
           ],
         ),
         body: SafeArea(

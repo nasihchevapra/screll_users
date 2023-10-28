@@ -4,6 +4,7 @@ import 'package:screll_sample/view/users_screen.dart';
 import 'package:screll_sample/view_model/users_provider.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
